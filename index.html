@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    /* .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); } */
+    :root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+    }
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin: 0%;
+      padding: 0%;
+    }
+    .container {
+      margin: 100px auto;
+    }
+    @media (min-width:668px) {
+      .container {
+        width: 375px;
+      }
+    }
+    @media (min-width:1220px) {
+      .container {
+        width: 1440px;
+      }
+    }
+    body {
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 400;
+    }
+    .container  {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+      width: 905px;
+    }
+    @media (max-width:668px) {
+      .container {
+        max-width: 90%;
+      }
+    }
+    .container .box {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-left: 45px;
+      flex-direction: column;
+    }
+    .container .box:first-of-type {
+      background-color: var(--Bright-orange);
+      border-radius: 10px 0px 0px 10px;
+    }
+    .container .box:nth-last-child(2) {
+      background-color: var(--Dark-cyan);
+    }
+    .container .box:last-of-type {
+      background-color: var(--Very-dark-cyan);
+      border-radius: 0px 10px 10px 0px;
+    }
+    @media (max-width:668px) {
+      .container .box:first-of-type {
+        border-radius: 10px 10px 0px 0px;
+      }
+      .container .box:last-of-type {
+        border-radius: 0px 0px 10px 10px;
+      }
+    }
+    .container .box img {
+      margin-top: 46px;
+      width: 64px;
+      height: 40px;
+    }
+    .container .box h1 {
+      color: var(--Very-light-gray);
+      margin: 30px 0px;
+      font-weight: 700;
+    }
+    .container .box p {
+      color: var(--Very-light-gray);
+      line-height: 1.7;
+      margin-block-end: 81px;
+      padding-inline: 0px 80px;
+    }
+    .container .box a {
+      text-decoration: none;
+      display: block;
+      text-transform: capitalize;
+      background-color: var(--Very-light-gray);
+      padding: 13px 35px;
+      transition: 0.5s;
+      margin: 0px 0px 46px;
+      border-radius: 30px;
+      border: 2px solid var(--Very-light-gray);
+    }
+    .container .box:first-of-type a {
+      color: var(--Bright-orange);
+    }
+    .container .box:first-of-type a:hover {
+      background-color: var(--Bright-orange);
+      color: var(--Very-light-gray);
+    }
+    .container .box:nth-last-child(2) a {
+      color: var(--Dark-cyan);
+    }
+    .container .box:nth-last-child(2) a:hover {
+      background-color: var(--Dark-cyan);
+      color: var(--Very-light-gray);
+    }
+    .container .box:last-of-type a {
+      color: var(--Very-dark-cyan);
+    }
+    .container .box:last-of-type a:hover {
+      background-color: var(--Very-dark-cyan);
+      color: var(--Very-light-gray);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <img src="images/icon-sedans.svg" alt="icon-sedans">
+      <h1>Sedans</h1>
+      <p>
+        Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
+        or on your next road trip.
+      </p>
+      <a href="#">learn more</a>
+    </div>
+    <div class="box">
+      <img src="images/icon-suvs.svg" alt="icon-suvs">
+      <h1>SUVs</h1>
+      <p>Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
+        and <br/>off-road adventures.</p>
+      <a href="#">learn more</a>
+    </div>
+    <div class="box">
+      <img src="images/icon-luxury.svg" alt="icon-luxury">
+      <h1>Luxury</h1>
+      <p>
+        Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
+        rental and arrive in style.
+      </p>
+      <a href="#">learn more</a>
+    </div>
+  </div>
+
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
